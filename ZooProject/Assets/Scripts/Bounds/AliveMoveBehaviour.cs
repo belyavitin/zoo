@@ -25,14 +25,17 @@ namespace Zoo
 
         private Vector3? lastPosition;
 
-        protected virtual void Update()
+        protected override void Update()
         {
+            base.Update();
+
             if (animal.CanMove())
                 UpdateFrustration();
         }
 
         private void FrustratedChangeDirection()
         {
+            Msg.Dispatch(new ZooAnimalFrustratedEvent(AnimalPosition));
             var e = transform.rotation.eulerAngles;
             rigidbody.MoveRotation(Quaternion.Euler(e.x, 180 - e.y + Random.Range(-frustrationDirectionRandomity, frustrationDirectionRandomity), e.z));
         }

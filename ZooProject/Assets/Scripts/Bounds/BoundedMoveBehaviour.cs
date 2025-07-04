@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using GameLogging;
 
 namespace Zoo
 {
@@ -8,7 +7,7 @@ namespace Zoo
     [RequireComponent(typeof(Rigidbody))]
     [RequireComponent(typeof(ZooAnimal))]
     [DisallowMultipleComponent]
-    public class BoundedMoveBehaviour : MonoBehaviourLogger, IZooBehaviour
+    public class BoundedMoveBehaviour : MonoBehaviourEventSender, IZooBehaviour
     {
         //[Inject]
         protected IBoundsChecker boundsChecker;
@@ -18,6 +17,8 @@ namespace Zoo
 
         protected Vector3 AnimalPosition => transform.position;
         protected float AnimalDirection => transform.rotation.y;
+
+        private bool wasOutOfBounds = false;
 
         protected virtual void Awake()
         {
@@ -29,6 +30,14 @@ namespace Zoo
         }
 
         protected virtual void Start() { }
+
+        protected virtual void Update()
+        {
+            bool isOutOfBounds = !IsInBounds();
+            if (isOutOfBounds && !wasOutOfBounds)
+                Msg.Dispatch(new ZooAnimalOutOfBoundsEvent(AnimalPosition));
+            wasOutOfBounds = isOutOfBounds;
+        }
 
         protected float ValidateDirectionWithinBounds(float direction)
         {
