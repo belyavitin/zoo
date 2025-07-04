@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Zoo\GameEvents\IZooAnimalEvent.cs" />
     <Compile Include="Assets\Scripts\Zoo\Ui\OutOfBoundsEventDisplayer.cs" />
     <Compile Include="Assets\Scripts\Extensions\MonoBehaviourLogger.cs" />
+    <Compile Include="Assets\Scripts\Zoo\AliveMoveBehaviour.cs" />
     <Compile Include="Assets\Scripts\Zoo\SnakeAnimalView.cs" />
     <Compile Include="Assets\Scripts\Zoo\GameEvents\MonoBehaviourEventSender.cs" />
     <Compile Include="Assets\Scripts\Extensions\GameObjectExtensions.cs" />
@@ -81,7 +82,6 @@
     <Compile Include="Assets\Scripts\Bounds\IBoundsChecker.cs" />
     <Compile Include="Assets\Scripts\Zoo\GameEvents\ZooAnimalDeathEvent.cs" />
     <Compile Include="Assets\Scripts\Zoo\IZooAnimal.cs" />
-    <Compile Include="Assets\Scripts\Bounds\BoundedMoveBehaviour.cs" />
     <Compile Include="Assets\Scripts\Zoo\Ui\SimpleEventText.cs" />
     <Compile Include="Assets\Scripts\Zoo\IAnimalSpawn.cs" />
     <Compile Include="Assets\Scripts\Zoo\Ui\FrustratedEventDiplayer.cs" />
@@ -90,10 +90,10 @@
     <Compile Include="Assets\Scripts\Zoo\IZooAnimalView.cs" />
     <Compile Include="Assets\Scripts\Bounds\BoundsControllerByCamera.cs" />
     <Compile Include="Assets\Scripts\Zoo\GameEvents\MonoBehaviourEventReceiver.cs" />
-    <Compile Include="Assets\Scripts\Bounds\AliveMoveBehaviour.cs" />
     <Compile Include="Assets\Scripts\Zoo\ZooEnclosure.cs" />
     <Compile Include="Assets\Scripts\Zoo\ZooAnimalView.cs" />
     <Compile Include="Assets\Scripts\Extensions\MonoSingleton.cs" />
+    <Compile Include="Assets\Scripts\Zoo\BoundedMoveBehaviour.cs" />
     <Compile Include="Assets\Scripts\Zoo\Ui\TastyEventDisplayer.cs" />
   </ItemGroup>
   <ItemGroup>
