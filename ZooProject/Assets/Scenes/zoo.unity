@@ -163,15 +163,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 224067376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0526689d890daf6458cd2dccaf4eccab, type: 3}
+  m_Script: {fileID: 11500000, guid: 700aa3a923ff61e4a8b239cb56f2af21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   logsEnabled: 14
-  randomOffset: {x: 5, y: 0, z: 5}
-  randomRotation: {x: 0, y: 360, z: 0}
+  randomOffset: {x: 0, y: 0, z: 0}
+  randomRotation: {x: 0, y: 0, z: 0}
   animalPrefabs:
   - {fileID: 3870758682594357396, guid: 7fffa67536c2b8c408c53d3b41f4e9d0, type: 3}
-  - {fileID: 637010362277445927, guid: dfc338127c1100743b989f8353cfd4f8, type: 3}
+  - {fileID: 3573386203653219818, guid: dfc338127c1100743b989f8353cfd4f8, type: 3}
 --- !u!1 &226389137
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +697,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 2230732570650464555, guid: 4d60eb7733c8f49448207ac195a51b18, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logsEnabled: 14
   count: 0
-  DietaryType: 0
+  dietaryType: 0
   format: '{0}: {1}'
 --- !u!1 &628420111
 GameObject:
@@ -778,13 +778,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 628420111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8748aa76fcbfcd946949c46b07aab6ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 29f3c6578badf3e43ac3f4e2af8ef0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   logsEnabled: 14
   timeToSpawn: 0
   secondsBetweenSpawns: 1
-  slowFramerateFps: 15
+  slowFramerateFps: 10
+  slowMode: 0
 --- !u!1 &652984980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,14 +1101,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 889049950}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0526689d890daf6458cd2dccaf4eccab, type: 3}
+  m_Script: {fileID: 11500000, guid: 700aa3a923ff61e4a8b239cb56f2af21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   logsEnabled: 14
-  randomOffset: {x: 5, y: 0, z: 5}
-  randomRotation: {x: 0, y: 360, z: 0}
+  randomOffset: {x: 0, y: 0, z: 0}
+  randomRotation: {x: 0, y: 0, z: 0}
   animalPrefabs:
-  - {fileID: 3870758682594357396, guid: 7fffa67536c2b8c408c53d3b41f4e9d0, type: 3}
+  - {fileID: 3573386203653219818, guid: dfc338127c1100743b989f8353cfd4f8, type: 3}
 --- !u!1 &1003347160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,6 +1770,8 @@ MonoBehaviour:
   gameCamera: {fileID: 1647408410}
   uiCanvas: {fileID: 1010678495}
   tastyTextPrefab: {fileID: 6584965237919142237, guid: 431d3f3b44989bd4f9efe2987d5bebdf, type: 3}
+  outOfBoundsTextPrefab: {fileID: 6584965237919142237, guid: 189c8c213e4d7f34f8e45898bb0bde3e, type: 3}
+  frustratedTextPrefab: {fileID: 6584965237919142237, guid: 1d7d2b13188d3394e990002476a117ee, type: 3}
 --- !u!4 &1758945649
 Transform:
   m_ObjectHideFlags: 0
@@ -1825,14 +1828,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1784210016}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0526689d890daf6458cd2dccaf4eccab, type: 3}
+  m_Script: {fileID: 11500000, guid: 700aa3a923ff61e4a8b239cb56f2af21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   logsEnabled: 14
-  randomOffset: {x: 5, y: 0, z: 5}
-  randomRotation: {x: 0, y: 360, z: 0}
+  randomOffset: {x: 0, y: 0, z: 0}
+  randomRotation: {x: 0, y: 0, z: 0}
   animalPrefabs:
-  - {fileID: 637010362277445927, guid: dfc338127c1100743b989f8353cfd4f8, type: 3}
+  - {fileID: 3870758682594357396, guid: 7fffa67536c2b8c408c53d3b41f4e9d0, type: 3}
 --- !u!1 &1813252967
 GameObject:
   m_ObjectHideFlags: 0
@@ -2123,7 +2126,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 2230732570650464555, guid: 4d60eb7733c8f49448207ac195a51b18, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -2158,7 +2161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logsEnabled: 14
   count: 0
-  DietaryType: 1
+  dietaryType: 1
   format: '{0}: {1}'
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -2171,5 +2174,5 @@ SceneRoots:
   - {fileID: 583562341}
   - {fileID: 628420112}
   - {fileID: 1010678496}
-  - {fileID: 1653517501}
   - {fileID: 1758945649}
+  - {fileID: 1653517501}

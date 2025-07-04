@@ -97,7 +97,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2409773733622449486}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: fddfd7a5b2e80e64aa6f3945b68cff68, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -120,11 +120,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2409773733622449486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7d2653c354a5f8498b05fae9e751258, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b2c7f57e0ecfa04bbf590bf4a515226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   logsEnabled: 14
-  DeathDelaySec: 1
+  frustrationFadePerDistance: 1
+  frustrationAddPerSecond: 3
+  frustrationThreshold: 10
+  frustrationDirectionRandomity: 90
+  standFrustration: 0
+  timeBetweenJumps: 1
+  timeBetweenJumpsRandomAdd: 1
+  jumpPower: 30
+  jumpAngle: 5
+  jumpDirectionRandom: 90
 --- !u!114 &3573386203653219818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,20 +143,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2409773733622449486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9fbb182341b7664589eb99843628818, type: 3}
+  m_Script: {fileID: 11500000, guid: b2b02f7b760cf0043a0a1c65bd84d390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   logsEnabled: 14
-  frustrationFadePerDistance: 1
-  frustrationAddPerSecond: 3
-  frustrationThreshold: 10
-  frustrationDirectionRandomity: 90
-  standFrustration: 0
-  timeBetweenJumps: 1.5
-  timeBetweenJumpsRandomAdd: 1
-  jumpPower: 20
-  jumpAngle: -30
-  jumpDirection: 90
+  DeathDelaySec: 1
 --- !u!54 &6106303287057199760
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 2
   m_Drag: 0.5
-  m_AngularDrag: 1
+  m_AngularDrag: 2
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2409773733622449486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6895ec2c08467b9468e7bf7f27153306, type: 3}
+  m_Script: {fileID: 11500000, guid: 99b08fdb50172e645bf835cf3b67bd03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   logsEnabled: 14

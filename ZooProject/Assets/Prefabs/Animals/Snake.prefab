@@ -99,7 +99,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232378869926730417}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d630d2b33cb50f942a40129afd262a1b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1232378869926730417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7d2653c354a5f8498b05fae9e751258, type: 3}
+  m_Script: {fileID: 11500000, guid: b2b02f7b760cf0043a0a1c65bd84d390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   logsEnabled: 14
@@ -136,18 +136,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1232378869926730417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 193586f0cc4dce24bab979cda28da022, type: 3}
+  m_Script: {fileID: 11500000, guid: 7718fff591411634fb8c9e7b17a852eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   logsEnabled: 14
   frustrationFadePerDistance: 1
   frustrationAddPerSecond: 3
   frustrationThreshold: 10
-  frustrationDirectionRandomity: 90
+  frustrationDirectionRandomity: 45
   standFrustration: 0
-  tongue: {fileID: 5018927928403368494}
   slitherPower: 10
-  slitherFrequency: 5
+  slitherFrequency: 3
   slitherTorque: 1
 --- !u!54 &5710883317285442369
 Rigidbody:
@@ -185,7 +184,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1232378869926730417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1a84f03eef29af4081c4d7c0ec73796, type: 3}
+  m_Script: {fileID: 11500000, guid: 18e1772ea5b085e42a6698e4b49466bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   logsEnabled: 14
@@ -198,12 +197,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1232378869926730417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6895ec2c08467b9468e7bf7f27153306, type: 3}
+  m_Script: {fileID: 11500000, guid: fe001205b4f156d4e9cdc2b130138333, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   logsEnabled: 14
   deadMaterials:
   - {fileID: 2100000, guid: 18dfe565055952449be62c061765b187, type: 2}
+  tongue: {fileID: 5018927928403368494}
+  tongueSpeed: 3
+  tongueSpeed2: 30
 --- !u!1 &1973921004545224778
 GameObject:
   m_ObjectHideFlags: 0
