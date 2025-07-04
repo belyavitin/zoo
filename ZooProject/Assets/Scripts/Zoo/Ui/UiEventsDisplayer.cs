@@ -4,11 +4,8 @@ using UnityEngine;
 
 namespace Zoo
 {
-    [DisallowMultipleComponent]
-    public class UiEventsDisplayer : MonoSingleton<UiEventsDisplayer>,
-         IMessagingSubscriber<ZooAnimalEatenEvent>,
-         IMessagingSubscriber<ZooAnimalFrustratedEvent>,
-         IMessagingSubscriber<ZooAnimalOutOfBoundsEvent>
+    public abstract class UiEventDisplayer<T> : MonoBehaviourEventReceiver,
+         IMessagingSubscriber<T> where T : IZooAnimalEvent
     {
         //[Inject]
         [SerializeField]
@@ -18,54 +15,30 @@ namespace Zoo
         [SerializeField]
         Canvas uiCanvas;
 
-        //[Inject]
-        MessagingSystem msg;
-        MessagingSystem Msg { get { if (msg == null) msg = MessagingSystem.Instance; return msg; } }
-
         [SerializeField]
-        SimpleEventText tastyTextPrefab;
-
-        [SerializeField]
-        SimpleEventText outOfBoundsTextPrefab;
-
-        [SerializeField]
-        SimpleEventText frustratedTextPrefab;
+        SimpleEventText eventTextPrefab;
 
         void OnEnable()
         {
-            Msg.Subscribe<ZooAnimalEatenEvent>(this);
-            Msg.Subscribe<ZooAnimalOutOfBoundsEvent>(this);
-            Msg.Subscribe<ZooAnimalFrustratedEvent>(this);
+            Msg.Subscribe<T>(this);
         }
 
         void OnDisable()
         {
-            Msg.Unsubscribe<ZooAnimalEatenEvent>(this);
-            Msg.Unsubscribe<ZooAnimalOutOfBoundsEvent>(this);
-            Msg.Unsubscribe<ZooAnimalFrustratedEvent>(this);
+            Msg.Unsubscribe<T>(this);
         }
 
-        public void OnReceiveMessage(ZooAnimalEatenEvent message)
+        public abstract Vector3 Pos(T message);
+
+        public void OnReceiveMessage(T message)
         {
             LogDebug(message);
-            ShowSimpleEventText(message.PredatorWorldPos, tastyTextPrefab);
+            ShowSimpleEventText(Pos(message), eventTextPrefab);
         }
 
-        public void OnReceiveMessage(ZooAnimalFrustratedEvent message)
+        protected Vector3 EventPosition(Vector3 worldPos)
         {
-            LogDebug(message);
-            ShowSimpleEventText(message.WorldPos, frustratedTextPrefab);
-        }
-
-        public void OnReceiveMessage(ZooAnimalOutOfBoundsEvent message)
-        {
-            LogDebug(message);
-            ShowSimpleEventText(message.WorldPos, outOfBoundsTextPrefab);
-        }
-
-        private Vector3 EventPosition(Vector3 predatorWorldPos)
-        {
-            var pos = gameCamera.WorldToScreenPoint(predatorWorldPos);
+            var pos = gameCamera.WorldToScreenPoint(worldPos);
             pos.z = 0;
             return pos;
         }

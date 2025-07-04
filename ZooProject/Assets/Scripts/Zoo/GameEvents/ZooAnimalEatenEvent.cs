@@ -2,7 +2,7 @@
 
 namespace Zoo
 {
-    public class ZooAnimalEatenEvent : IBusEvent
+    public class ZooAnimalEatenEvent : IZooAnimalEvent
     {
         public readonly Vector3 PredatorWorldPos;
 

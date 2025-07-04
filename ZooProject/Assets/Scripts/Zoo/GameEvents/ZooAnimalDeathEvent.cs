@@ -3,7 +3,7 @@ using System;
 
 namespace Zoo
 {
-    public class ZooAnimalDeathEvent : IBusEvent
+    public class ZooAnimalDeathEvent : IZooAnimalEvent
     {
         public readonly EZooAnimalDietaryType Dietary;
 
