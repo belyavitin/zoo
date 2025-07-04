@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGM.MessagingSystem", "JGM.MessagingSystem.csproj", "{917E51CF-FACC-00FF-CC3C-3D08C86F6415}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{AF4DB61F-90A4-A5CA-C4DD-A2326C8E197B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JGM.MessagingSystemTests", "JGM.MessagingSystemTests.csproj", "{D09F54F5-1B13-A1DA-5263-36C07C078950}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{917E51CF-FACC-00FF-CC3C-3D08C86F6415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{917E51CF-FACC-00FF-CC3C-3D08C86F6415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{917E51CF-FACC-00FF-CC3C-3D08C86F6415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{917E51CF-FACC-00FF-CC3C-3D08C86F6415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF4DB61F-90A4-A5CA-C4DD-A2326C8E197B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF4DB61F-90A4-A5CA-C4DD-A2326C8E197B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF4DB61F-90A4-A5CA-C4DD-A2326C8E197B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF4DB61F-90A4-A5CA-C4DD-A2326C8E197B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D09F54F5-1B13-A1DA-5263-36C07C078950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D09F54F5-1B13-A1DA-5263-36C07C078950}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D09F54F5-1B13-A1DA-5263-36C07C078950}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D09F54F5-1B13-A1DA-5263-36C07C078950}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
