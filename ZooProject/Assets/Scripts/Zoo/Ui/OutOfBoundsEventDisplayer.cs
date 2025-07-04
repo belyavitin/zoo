@@ -2,9 +2,9 @@
 
 namespace Zoo
 {
-    public class OutOfBoundsEventDisplayer : UiEventDisplayer<ZooAnimalFrustratedEvent>
+    public class OutOfBoundsEventDisplayer : UiEventDisplayer<ZooAnimalOutOfBoundsEvent>
     {
-        public override Vector3 Pos(ZooAnimalFrustratedEvent message)
+        public override Vector3 Pos(ZooAnimalOutOfBoundsEvent message)
         {
             return message.WorldPos;
         }
