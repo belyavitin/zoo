@@ -60,11 +60,16 @@
     <Analyzer Include="C:\Program Files\Unity 2022.3.49f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\UiEventsDisplayer.cs" />
+    <Compile Include="Assets\Scripts\MonoBehaviourEventReceiver.cs" />
+    <Compile Include="Assets\Scripts\TastyText.cs" />
     <Compile Include="Assets\Scripts\MonoBehaviourEventSender.cs" />
     <Compile Include="Assets\Scripts\Extensions\RandomExtensions.cs" />
+    <Compile Include="Assets\Scripts\DeathCounterText.cs" />
     <Compile Include="Assets\Scripts\IZooAnimal.cs" />
     <Compile Include="Assets\Scripts\Extensions\MonoBehaviourLogger.cs" />
     <Compile Include="Assets\Scripts\AnimalBehaviour.cs" />
+    <Compile Include="Assets\Scripts\ZooAnimalView.cs" />
     <Compile Include="Assets\Scripts\IAnimalSpawn.cs" />
     <Compile Include="Assets\Scripts\Extensions\GameObjectExtensions.cs" />
     <Compile Include="Assets\Scripts\Bounds\IBoundsChecker.cs" />
@@ -75,7 +80,7 @@
     <Compile Include="Assets\Scripts\PredatorBehavior.cs" />
     <Compile Include="Assets\Scripts\Bounds\BoundsControllerByCamera.cs" />
     <Compile Include="Assets\Scripts\ZooEnclosure.cs" />
-    <Compile Include="Assets\Scripts\UiController.cs" />
+    <Compile Include="Assets\Scripts\Bounds\AliveMoveBehaviour.cs" />
     <Compile Include="Assets\Scripts\SnakeMoveBehaviour.cs" />
     <Compile Include="Assets\Scripts\ToadJumpBehaviour.cs" />
     <Compile Include="Assets\Scripts\Extensions\MonoSingleton.cs" />
